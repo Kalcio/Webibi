@@ -1,8 +1,8 @@
 :root{
+    --primario: #E37159;
     --secundario: #C64024;
-    --tercero: #E37159;
-    ---
-
+    --blanco: white;
+    --tercero: #BA4D36;
 }
 
 html {
@@ -11,6 +11,7 @@ html {
 
 body {
     font-size: 16px;
+    font-family: 'Kiwi Maru', serif;
 }
 
 .titulo {
@@ -19,15 +20,10 @@ body {
     text-transform: uppercase;
     font-size: 3.8rem;
 }
-
-h1.titulo span {
-    font-size: 2rem;
-    color: brown;
-}
-
+    
 .titulo span{
     font-size: 2rem;
-    color: #BA4D36;
+    color: var(--tercero);
 }
 
 .contenedor {
@@ -36,9 +32,23 @@ h1.titulo span {
     margin:  0 auto;
 }
 
-.navegacion-principal {
+.nav-bg {
     background-color: var(--secundario);
 } 
+
+.navegacion-principal{
+    display: flex;
+    justify-content: space-between;
+}
+
 .navegacion-principal a{
-    background-color:;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{ /* Cambia de color la opción */
+    background-color: var(--primario);
 }
