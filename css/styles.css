@@ -60,3 +60,9 @@ body {
 .navegacion-principal a:hover{ /* Cambia de color la opción */
     background-color: var(--primario);
 }
+
+.hero {
+    background-image: url(../img/madera_inicio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
