@@ -10,8 +10,9 @@ html {
 }
 
 body {
-    font-size: 16px;
+    font-size: 3rem;
     font-family: 'Kiwi Maru', serif;
+    background-color: #6D461D;
 }
 
 .titulo {
@@ -27,7 +28,7 @@ body {
 }
 
 .contenedor {
-    width: 120rem;
+    max-width: 120rem;
 
     margin:  0 auto;
 }
@@ -38,7 +39,14 @@ body {
 
 .navegacion-principal{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .navegacion-principal a{
