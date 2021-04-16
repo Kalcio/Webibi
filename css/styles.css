@@ -1,4 +1,4 @@
-:root{
+:root{   /* Colores */
     --primario: #E37159;
     --secundario: #C64024;
     --blanco: white;
@@ -6,6 +6,7 @@
     --cuarto: #86715B
 }
 
+/* Globales */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -16,11 +17,39 @@ html {
 }
 
 body {
-    font-size: 16px;
+    font-size: 16px;       /* 1rem = 10px */
     font-family: 'Kiwi Maru', serif;
     background-color: #6D461D;
 } 
 
+.contenedor {
+    max-width: 120rem;
+
+    margin:  0 auto;
+}
+
+.boton {   /* Creación boton */
+    background-color: var(--cuarto);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {  /* Ajustar tamaño */
+    .boton {
+        width: auto;
+    }
+}
+/* ---------- */
+
+/* Tipografía*/
 h1 {
     font-size: 3.8rem;
     color: brown;
@@ -39,36 +68,12 @@ h3 {
 h1,h2,h3 {
     text-align: center;
 }
+/* ----------- */
 
-.titulo span{
+/* Titulos */
+.titulo span{        /*Titulo pequeño*/
     font-size: 2rem;
     color: var(--tercero);
-}
-
-.contenedor {
-    max-width: 120rem;
-
-    margin:  0 auto;
-}
-
-.boton {
-    background-color: var(--cuarto);
-    color: var(--blanco);
-    padding: 1rem 3rem;
-    margin-top: 1rem;
-    font-size: 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: .5rem;
-    width: 90%;
-    text-align: center;
-}
-
-@media (min-width: 480px) {
-    .boton {
-        width: auto;
-    }
 }
 
 .nav-bg {
@@ -99,7 +104,7 @@ h1,h2,h3 {
     background-color: var(--primario);
 }
 
-.hero {
+.hero {   /* Imagen principal */
     background-image: url(../img/canape_inicio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -110,12 +115,12 @@ h1,h2,h3 {
 
 .contenido-hero {
     position: absolute;
-    background-color: rgba( 0,0,0, .3 );
+    background-color: rgba( 0,0,0, .3 );   /* Difuminado imagen */
     width: 100%;
     height: 100%;
 }
 
-.ubicacion {
+.ubicacion {     /* Texto ubicación */
     display: flex;
     flex-direction: column;
     align-items: center;
