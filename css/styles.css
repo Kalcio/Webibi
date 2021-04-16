@@ -4,7 +4,9 @@
     --secundario: #C64024;
     --blanco: white;
     --tercero: #BA4D36;
-    --cuarto: #86715B
+    --cuarto: #86715B;
+    --quinto: #E08F3A;
+    --sexto: #955C20;
 }
 
 /* Globales */
@@ -28,7 +30,6 @@ body {
 
 .contenedor {
     max-width: 120rem;
-
     margin: 0 auto;
 }
 
@@ -53,6 +54,15 @@ body {
     .boton {
         width: auto;
     }
+}
+
+.sombra {
+    -webkit-box-shadow: 10px 7px 15px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 7px 15px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 7px 15px 0px rgba(0,0,0,0.75);
+background-color: var(--quinto);
+padding: 2rem;
+border-radius: 1rem;
 }
 
 /* ---------- */
@@ -141,6 +151,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
 /* Servicios */
@@ -148,5 +159,27 @@ h3 {
     .servicios {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
     }
+}
+
+/* Contacto */
+.formulario {
+    background-color: var(--sexto);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2 rem;
+    color: var(--primario);
 }
