@@ -1,4 +1,5 @@
-:root{   /* Colores */
+:root {
+    /* Colores */
     --primario: #E37159;
     --secundario: #C64024;
     --blanco: white;
@@ -12,23 +13,27 @@ html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after{
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 body {
-    font-size: 16px;       /* 1rem = 10px */
+    font-size: 16px;
+    /* 1rem = 10px */
     font-family: 'Kiwi Maru', serif;
     background-color: #6D461D;
-} 
+}
 
 .contenedor {
     max-width: 120rem;
 
-    margin:  0 auto;
+    margin: 0 auto;
 }
 
-.boton {   /* Creación boton */
+.boton {
+    /* Creación boton */
     background-color: var(--cuarto);
     color: var(--blanco);
     padding: 1rem 3rem;
@@ -42,11 +47,14 @@ body {
     text-align: center;
 }
 
-@media (min-width: 768px) {  /* Ajustar tamaño */
+@media (min-width: 768px) {
+
+    /* Ajustar tamaño */
     .boton {
         width: auto;
     }
 }
+
 /* ---------- */
 
 /* Tipografía*/
@@ -65,34 +73,38 @@ h3 {
     font-size: 1.8rem;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     text-align: center;
 }
+
 /* ----------- */
 
 /* Titulos */
-.titulo span{        /*Titulo pequeño*/
+.titulo span {
+    /*Titulo pequeño*/
     font-size: 2rem;
     color: var(--tercero);
 }
 
 .nav-bg {
     background-color: var(--secundario);
-} 
+}
 
-.navegacion-principal{
+.navegacion-principal {
     display: flex;
     flex-direction: column;
 }
 
 @media (min-width: 768px) {
-    .navegacion-principal{
+    .navegacion-principal {
         flex-direction: row;
         justify-content: space-between;
     }
 }
 
-.navegacion-principal a{
+.navegacion-principal a {
     color: var(--blanco);
     text-decoration: none;
     font-size: 2rem;
@@ -100,11 +112,13 @@ h1,h2,h3 {
     padding: 1rem;
 }
 
-.navegacion-principal a:hover{ /* Cambia de color la opción */
+.navegacion-principal a:hover {
+    /* Cambia de color la opción */
     background-color: var(--primario);
 }
 
-.hero {   /* Imagen principal */
+.hero {
+    /* Imagen principal */
     background-image: url(../img/canape_inicio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,15 +129,24 @@ h1,h2,h3 {
 
 .contenido-hero {
     position: absolute;
-    background-color: rgba( 0,0,0, .3 );   /* Difuminado imagen */
+    background-color: rgba(0, 0, 0, .3);
+    /* Difuminado imagen */
     width: 100%;
     height: 100%;
 }
 
-.ubicacion {     /* Texto ubicación */
+.ubicacion {
+    /* Texto ubicación */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+/* Servicios */
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
